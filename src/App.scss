@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(25, 7, 39);
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  padding: 15px 20px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #1f7309;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  &:hover {
+    background-color: #1e7309dd;
+  }
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    background-color: #ccc;
+    border-radius: 15px;
+    width: 300px;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+    .title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .form-input {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        padding: 10px;
+        border-radius: 4px;
+        color: #333;
+      }
+
+      input:invalid[focused="true"] {
+        border: 1px solid rgb(193, 3, 3);
+      }
+
+      input:invalid[focused="true"] ~ span {
+        display: block;
+      }
+
+      span {
+        margin-top: 5px;
+        font-size: 10px;
+        color: rgb(193, 3, 3);
+        text-align: start;
+        display: none;
+      }
+    }
+  }
+}
